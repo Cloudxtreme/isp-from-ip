@@ -24,10 +24,10 @@ for ip in G:
 	response = urllib2.urlopen(url)
 	webContent = response.read()
 	
-	f = open('conclusion.txt', 'w')
+	f = open('temp.txt', 'w')
 	f.write(webContent)
 	f.close
 	
-	soup = bs4.BeautifulSoup (open("conclusion.txt"))
+	soup = bs4.BeautifulSoup (open("temp.txt"))
 	
 	print soup.table.tr.td.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next.next
